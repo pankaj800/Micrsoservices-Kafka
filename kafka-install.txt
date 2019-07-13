@@ -1,5 +1,7 @@
 Download latest Kafka project
 Untar it 
+
+run the zookeeper
 In the root  run git bash and run the following script
 bin/kafka-server-start.sh config/server.properties
 
