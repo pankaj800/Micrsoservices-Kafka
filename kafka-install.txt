@@ -1,0 +1,12 @@
+Download latest Kafka project
+Untar it 
+In the root  run git bash and run the following script
+bin/kafka-server-start.sh config/server.properties
+
+kafka-topics.bat — create — zookeeper localhost:2181 — replication-factor 1 — partitions 1 — topic sql-insert
+
+kafka-console-consumer.bat -bootstrap-server localhost:9092 -topic sql-insert
+
+kafka-console-producer.bat — broker-list localhost:9091 — topic sql-insert
+
+
