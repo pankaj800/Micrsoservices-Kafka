@@ -2,13 +2,22 @@ Download latest Kafka project
 Untar it 
 
 run the zookeeper
-In the root  run git bash and run the following script
+
+In the root  open git bash and run the following script
 bin/kafka-server-start.sh config/server.properties
 
+
+If the OS is Windows
+===========================================
+Go to the root folder then bin>windows
+below commands need to be run in cmd prompt 
+#script to create a topic 
 kafka-topics.bat — create — zookeeper localhost:2181 — replication-factor 1 — partitions 1 — topic sql-insert
 
+#script to create a consumer,not needed as of now
 kafka-console-consumer.bat -bootstrap-server localhost:9092 -topic sql-insert
 
+#script to create a producer,not needed as of now
 kafka-console-producer.bat — broker-list localhost:9091 — topic sql-insert
 
 
